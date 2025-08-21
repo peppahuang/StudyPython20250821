@@ -37,4 +37,12 @@ then write commit
 then  
 > [master (root-commit) eaadf4e] wrote a readme file  
  1 file changed, 2 insertions(+)  
- create mode 100644 readme.txt  
+ create mode 100644 readme.txt
+> 可以add多次，commit一次
+- 查看当前库状态
+`git status`  
+- 查看文件修改情况  
+`git diff filename`  
+- 查看记录
+`git log`
+- 版本回退
