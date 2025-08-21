@@ -78,3 +78,42 @@ then
 
 - 把本地内容推送到库里
 `git remote add origin git@github.com:youername/learngit.git`
+- 远程库名字默认为origin  推送本地库的内容到远程库上
+`git push -u origin master`
+- 推送最新修改至github
+`git push origin master`
+- 克隆一个库到本地
+`git clone git@github.com:michaelliao/gitskills.git`
+
+
+### 4. 分支  
+- 创建并切换到dev分支  `git checkout -b dev`  （-b参数表示创建并切换）
+- 创建分支  `git branch <branchname>`
+- 切换分支 `git checkout <branchname>`
+<img width="808" height="98" alt="image" src="https://github.com/user-attachments/assets/0ed33d20-150d-412d-ac92-4e7a0f4a8a27" />  
+
+- 查看所有分支`git branch`
+- 把分支dev工作成果合并到master上  `git merge dev`
+- 删除dev分支  `git branch -d dev`
+#### switch操作（切换和新建分支）  
+新建并且切换分支  `git switch -c dev`  
+切换到已经有的分支  `git switch master`  
+#### 解决冲突  
+在两个分支上面的修改不同出现冲突，merge就出错  
+使用  `git status`  查看冲突  
+查看分支合并情况  `git log --graph --pretty=oneline --abbrev-commit`  
+
+- fast forward模式在删除分支之后会丢掉分支信息
+如果强制禁用了ff模式，就会在merge的时候生成一个新的commit，从分支历史上可以看到分支信息
+`git merge --no-ff -m "merge with no-ff" dev`
+
+
+#### bug分支  
+储藏当前工作现场  `git stash`  
+> Saved working directory and index state WIP on master: 0c4ab1a merge with no-ff
+查看工作现场  `git stash list`
+恢复工作现场：
+> `git stash apply`  恢复不删除，用  `git stash drop`  删除
+> `git stash pop`  恢复且删除
+> 恢复指定的stash  `git stash apply stash@{0}`
+> 复制master分支下修复的bug到dev分支：`git cherry-pick 4c805e2`
