@@ -27,6 +27,8 @@ $ pwd
 2. turn dir to git repository`git init`
 then 
 > Initialized empty Git repository in E:/FanweiCode/LearningCode/.git/
+
+
 ### 2. 文件add和修改
 #### a. 添加文件  
 - add file to git repository`git add readme.txt`  
@@ -68,3 +70,8 @@ then
 - 系统中删除  `rm <filename>`
 - 系统中删除后从版本库中删除  `git rm <filename>` 并且需要commit  
 - 本地误删文件后恢复  `git checkout -- <filename>`
+
+
+### 3. 远程仓库
+- 创建SSH KEY（和远程仓库通过SSH加密）  
+`ssh-keygen -t rsa -C "youremail@example.com"`
