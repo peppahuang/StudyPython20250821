@@ -14,7 +14,7 @@
 - 配置git  
 ```
 $ git config --global user.name "Your Name"
-`$ git config --global user.email "email@example.com"
+$ git config --global user.email "email@example.com"
 ```
 - build repository  
 1. mkdir  
