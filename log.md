@@ -75,3 +75,6 @@ then
 ### 3. 远程仓库
 - 创建SSH KEY（和远程仓库通过SSH加密）  
 `ssh-keygen -t rsa -C "youremail@example.com"`
+
+- 把本地内容推送到库里
+`git remote add origin git@github.com:youername/learngit.git`
