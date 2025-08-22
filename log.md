@@ -117,3 +117,38 @@ then
 > `git stash pop`  恢复且删除
 > 恢复指定的stash  `git stash apply stash@{0}`
 > 复制master分支下修复的bug到dev分支：`git cherry-pick 4c805e2`
+
+
+# 20250822
+## Git  
+[https://liaoxuefeng.com/books/git/install-git/index.html](https://liaoxuefeng.com/books/git/branch/feature/index.html)  
+### 4. 分支  
+- feature分支  
+强行删除分支
+`git branch -D <branch name>`  
+- 多人协作
+查看远程库内容  `git remote`
+查看远程库内容（详细）  `git remote -v`
+推送分支  `git push <remote branch> <要推送分支>`
+- 创建和远程一样的分支
+`git checkout -b dev origin/dev`
+- 建立本地分支和远程分支的关联  `git branch --set-upstream branch-name origin/branch-name`
+- 本地分支提交历史整理成直线  `git rebase`  
+
+### 5. 标签管理tag  
+tag:把一个名字和commit进行绑定  
+1. 切换到需要打标签的分支
+2. 打标签  `git tag <tagname>`  默认打在最新的commit  
+3. 查看所有标签  `git tag`
+4. 对某个id 的commit打标签  `git tag <tagname> <commit id>`
+5. `-a`：指定标签名  `-m`：指定说明文字  `git tag -a v0.1 -m "version 0.1 released" 1094adb`
+6. 查看标签信息  `git show <tagname>`
+7. 删除未推送标签  `git tag -d <tagname>`
+8. 推送标签到远程  `git push origin <tagname>`
+9. 推送所有标签到远程  `git push origin --tags`
+10. 删除已推送标签  `git tag -d <tagname>`  再删除远程的  `git push origin :refs/tags/<tagname>`
+
+
+### 6. gitee
+同时关联两个远程 `git remote add <name1> ssh1`  `git remote add <name2> ssh2`  
+删除远程  `git remote rm <name>`
