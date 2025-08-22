@@ -152,3 +152,16 @@ tag:把一个名字和commit进行绑定
 ### 6. gitee
 同时关联两个远程 `git remote add <name1> ssh1`  `git remote add <name2> ssh2`  
 删除远程  `git remote rm <name>`
+推送哪一个就用哪一个name  
+
+### 7. 其他操作
+- 忽略本地文件夹中的无关文件：在根目录下面创建一个`.gitignore`文件  
+- 设置别名:  
+```
+git config --global alias.st status  
+git config --global alias.co checkout  
+git config --global alias.ci commit  
+git config --global alias.br branch
+git config --global alias.lg "log --color --graph --pretty=format:'%Cred%h%Creset -%C(yellow)%d%Creset %s %Cgreen(%cr) %C(bold blue)<%an>%Creset' --abbrev-commit"
+```
+
